@@ -17,5 +17,4 @@ RUN sed -i -e 's/use_venv=1/use_venv=0/g' webui.sh
 # Allow running as root
 RUN sed -i -e 's/can_run_as_root=0/can_run_as_root=1/g' webui.sh
 
-ENTRYPOINT ["/app/webui.sh"]
-CMD ["--listen"]
+ENTRYPOINT ["/app/webui.sh", "--listen"]
